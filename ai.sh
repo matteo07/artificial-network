@@ -26,6 +26,13 @@ class Neuron(val in: ArrayBuffer[Int], val weight: Int){
 	override def toString = "A neuron"
 }
 
+def computeIn(neurons: ArrayBuffer[Neuron]): ArrayBuffer[Int] = {
+	val res = new ArrayBuffer[Int]()
+	for(n <- neurons){
+		res += neurons(n).compute
+	}
+	
+}
 
 class NeuralNetwork(){
 	val input = new ArrayBuffer[Int]
@@ -53,11 +60,6 @@ class NeuralNetwork(){
 	out += new Neuron()
 	out += new Neuron()
 	out += new Neuron()
-	
-	
-def computeIn(neurons : ArrayBuffer[Neuron]): ArrayBuffer[Int] = {
-		new ArrayBuffer[Int]()
-	}
 }
 
 new NeuralNetwork()
