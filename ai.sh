@@ -28,10 +28,10 @@ class Neuron(val in: ArrayBuffer[Int], val weight: Int){
 
 def computeIn(neurons: ArrayBuffer[Neuron]): ArrayBuffer[Int] = {
 	val res = new ArrayBuffer[Int]()
-	for(n <- neurons){
-		res += neurons(n).compute
+	for(i <- 1 to neurons.length) {
+		res += neurons(i).compute
 	}
-	
+	return res
 }
 
 class NeuralNetwork(){
