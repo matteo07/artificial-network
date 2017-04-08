@@ -8,8 +8,8 @@ def test(cond: Boolean,message: String) = {
 	if (debug) assert(cond,message)
 }
 
-class Neuron(val in: ArrayBuffer[Int], val out: ArrayBuffer[Int], val weight: Int){
-	def this() = this(new ArrayBuffer[Int](), new ArrayBuffer[Int](), 1)
+class Neuron(val in: ArrayBuffer[Int], val weight: Int){
+	def this() = this(new ArrayBuffer[Int](), 1)
 	
 	def getIn(): Int = {
 		val res = 1
@@ -32,9 +32,9 @@ class NeuralNetwork(){
 	input += 1
 	input += 1
 	
-	val in1 = new Neuron(input,input,1)
-	val in2 = new Neuron(input,input,1)
-	val in3 = new Neuron(input,input,1)
+	val in1 = new Neuron(input,1)
+	val in2 = new Neuron(input,1)
+	val in3 = new Neuron(input,1)
 	
 	val out1 = new Neuron()
 	val out2 = new Neuron()
