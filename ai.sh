@@ -26,42 +26,41 @@ class Neuron(val in: ArrayBuffer[Int], val weight: Int){
 	override def toString = "A neuron"
 }
 
+def computeIn(val neurons: ArrayBuffer[Neuron]): ArrayBuffer[Int]{
+	val res = new ArrayBuffer[Int]()
+	
+	
+}
+
 class NeuralNetwork(){
 	val input = new ArrayBuffer[Int]
 	input += 1
-	input += 1
-	input += 1
 	
-	val in1 = new Neuron(input,1)
-	val in2 = new Neuron(input,1)
-	val in3 = new Neuron(input,1)
+	val in = new ArrayBuffer[Neuron]
+	val middle = new ArrayBuffer[Neuron]
+	val out = new ArrayBuffer[Neuron]
+	
+	in += new Neuron(input,1)
+	in += new Neuron(input,1)
+	in += new Neuron(input,1)
+	
+	
+	for( a <- 1 to 3){
+		in += new Neuron(input,1)
+	}
+	
+	
 	
 	val out1 = new Neuron()
 	val out2 = new Neuron()
 	val out3 = new Neuron()
 	
-	val middle1 = new Neuron()
-	val middle2 = new Neuron()
-	
-	val in = new ArrayBuffer[Neuron]
-	in += new Neuron()
-	in += new Neuron()
-	in += new Neuron()
-	
-	val out = new ArrayBuffer[Neuron]
 	out += new Neuron()
 	out += new Neuron()
 	out += new Neuron()
-	
-	val middle = new ArrayBuffer[Neuron]
-	middle += new Neuron()
-	middle += new Neuron()
-	
-	
 }
 
-test((true),"Doh")
+new NeuralNetwork()
 
-val a = new ArrayBuffer[Int]()
-val x = new Neuron()
-println("Weight: " + x.weight)
+test((true),"Doh")
+println("GVNG")
